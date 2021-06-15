@@ -11,4 +11,8 @@ const rootReducer = combineReducers({
 
 export const store = createStore(rootReducer,applyMiddleware(thunk))
 
+store.subscribe(()=>{
+    window.localStorage.setItem('history', JSON.stringify(store.getState().history.history))
+})
+
 export type RootState = ReturnType<typeof rootReducer>
