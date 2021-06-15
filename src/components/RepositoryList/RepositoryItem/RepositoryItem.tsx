@@ -2,12 +2,20 @@ import React from 'react'
 
 import './repositoryItem.scss'
 
-const RepositoryItem = () => {
+interface RepositoryItemProps {
+    list: {
+        name: string,
+        language: string,
+        description: string
+    }
+}
+
+const RepositoryItem = ({list}: RepositoryItemProps) => {
     return (
         <div className="repository__item">
-            <span className="repository__item__title">accordion</span>
-            <span className="repository__item__heading">Language: <span className="repository__item__value">Java</span></span>
-            <span className="repository__item__heading">Description: <span className="repository__item__value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quaerat?</span></span>
+            <span className="repository__item__title">{list.name}</span>
+            <span className="repository__item__heading">Language: <span className="repository__item__value">{list.language}</span></span>
+            <span className="repository__item__heading">Description: <span className="repository__item__value">{list.description}</span></span>
         </div>
 
     )
