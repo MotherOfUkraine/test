@@ -1,0 +1,9 @@
+.history{
+  margin-top: 15px;
+  color: #fff;
+  &__list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+}

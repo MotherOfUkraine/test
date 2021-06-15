@@ -1,0 +1,14 @@
+@import '../../utils/color.scss';
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid $font-color;
+
+
+  &__title{
+    color: $font-color
+  }
+}
+
