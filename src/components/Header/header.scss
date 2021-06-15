@@ -6,9 +6,23 @@
   padding: 30px 0;
   border-bottom: 1px solid $font-color;
 
+  &__logo{
+    width: 150px;
+    height: 150px;
+  }
 
   &__title{
     color: $font-color
   }
 }
 
+@media (max-width: 1300px){
+  .header{
+    flex-direction: column;
+    align-items: center;
+
+    &__title{
+      margin-top: 15px;
+    }
+  }
+}

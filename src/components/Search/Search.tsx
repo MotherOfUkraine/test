@@ -6,6 +6,7 @@ import {searchRepository} from "../../redux/action/list"
 import {setList} from "../../redux/reducers/listReducer"
 
 import './search.scss'
+import {setHistory} from "../../redux/reducers/historyReducer";
 
 const Search = () => {
     const [searchValue, setSearchValue] = useState('')
@@ -17,6 +18,7 @@ const Search = () => {
         searchTimeout && clearTimeout(searchTimeout)
         e.target.value !== '' ? setSearchTimeout(setTimeout((value: string) => {
             dispatch(searchRepository(value))
+            dispatch(setHistory(value))
         }, 500, e.target.value)) : dispatch(setList([]))
     }
     return (

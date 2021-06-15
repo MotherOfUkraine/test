@@ -1,17 +1,18 @@
 import React from 'react'
 
 import './searchHistory.scss'
+import {useTypedSelector} from "../../../hooks/useTypedSelector";
 
 const SearchHistory = () => {
+
+    const {history} = useTypedSelector(state => state.history)
     return (
         <div className="history">
             <span className="history__title">Search history:</span>
             <div className="history__list">
-                <span>tom</span>
-                <span>asdasd</span>
-                <span>toadfadm</span>
-                <span>asdass</span>
-                <span>tozzzzm</span>
+                {
+                    history.map((item: string) => <span>{item}</span>)
+                }
             </div>
         </div>
     )

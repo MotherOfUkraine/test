@@ -11,9 +11,16 @@ html,body {
 .container{
     max-width: 1300px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .content{
     margin-top: 20px;
     display: flex;
+}
+
+@media (max-width: 1300px){
+    .content{
+        flex-direction: column;
+    }
 }

@@ -1,8 +1,8 @@
 import {applyMiddleware, combineReducers, createStore} from "redux"
+import thunk from "redux-thunk"
 
 import listReducer from "./reducers/listReducer"
-import historyReducer from "./reducers/historyReducer";
-import thunk from "redux-thunk";
+import historyReducer from "./reducers/historyReducer"
 
 const rootReducer = combineReducers({
     list: listReducer,
