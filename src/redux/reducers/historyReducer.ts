@@ -2,7 +2,7 @@ import {historyAction, historyState, historyType} from "../../types/historyTypes
 
 
 const initialState: historyState = {
-    history: JSON.parse(<string>localStorage.getItem('history')) ?? []
+    history: []
 }
 
 const historyReducer = (state = initialState, action: historyAction): historyState => {
